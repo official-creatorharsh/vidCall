@@ -1,0 +1,74 @@
+[debug] [2021-05-09T10:37:38.683Z] ----------------------------------------------------------------------
+[debug] [2021-05-09T10:37:38.693Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:vidcall-snbapps
+[debug] [2021-05-09T10:37:38.695Z] CLI Version:   9.10.2
+[debug] [2021-05-09T10:37:38.695Z] Platform:      win32
+[debug] [2021-05-09T10:37:38.696Z] Node Version:  v15.8.0
+[debug] [2021-05-09T10:37:38.699Z] Time:          Sun May 09 2021 16:07:38 GMT+0530 (India Standard Time)
+[debug] [2021-05-09T10:37:38.700Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-09T10:37:38.735Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-09T10:37:38.736Z] > authorizing via signed-in user (snbapps1@gmail.com)
+[debug] [2021-05-09T10:37:38.737Z] [iam] checking project vidcall-snbapps for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-05-09T10:37:38.747Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-05-09T10:37:38.748Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-09T10:37:39.461Z] <<< HTTP RESPONSE 200 {"date":"Sun, 09 May 2021 10:37:39 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-09T10:37:39.594Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vidcall-snbapps:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-05-09T10:37:41.556Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 09 May 2021 10:37:41 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1367","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-09T10:37:41.562Z] > refreshing access token with scopes: []
+[debug] [2021-05-09T10:37:41.563Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-09T10:38:02.581Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-05-09T10:38:03.667Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:141:12)
+    at refreshTokens (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:448:15)
+    at processTicksAndRejections (node:internal/process/task_queues:94:5)
+    at async Client.getAccessToken (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:144:23)
+    at async Client.addAuthHeader (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:135:21)
+    at async Client.request (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:93:34)
+    at async Object.getFirebaseProject (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:66:9)
+    at async C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:169:17
+[error] 
+[error] Error: Failed to get Firebase project vidcall-snbapps. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-05-09T10:41:07.380Z] ----------------------------------------------------------------------
+[debug] [2021-05-09T10:41:07.390Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-05-09T10:41:07.392Z] CLI Version:   9.10.2
+[debug] [2021-05-09T10:41:07.392Z] Platform:      win32
+[debug] [2021-05-09T10:41:07.393Z] Node Version:  v15.8.0
+[debug] [2021-05-09T10:41:07.396Z] Time:          Sun May 09 2021 16:11:07 GMT+0530 (India Standard Time)
+[debug] [2021-05-09T10:41:07.397Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-09T10:41:07.433Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-09T10:41:07.434Z] > authorizing via signed-in user (snbapps1@gmail.com)
+[debug] [2021-05-09T10:41:07.434Z] [iam] checking project vidcall-snbapps for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2021-05-09T10:41:07.444Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vidcall-snbapps:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2021-05-09T10:41:09.376Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 09 May 2021 10:41:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1378","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-09T10:41:09.386Z] > refreshing access token with scopes: []
+[debug] [2021-05-09T10:41:09.387Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-09T10:41:10.251Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Sun, 09 May 2021 10:41:10 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-09T10:41:10.351Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vidcall-snbapps [none]
+[debug] [2021-05-09T10:41:11.175Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vidcall-snbapps 200
+[debug] [2021-05-09T10:41:11.176Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vidcall-snbapps {"projectId":"vidcall-snbapps","projectNumber":"514817633091","displayName":"vidCall","name":"projects/vidcall-snbapps","resources":{"hostingSite":"vidcall-snbapps","realtimeDatabaseInstance":"vidcall-snbapps-default-rtdb","storageBucket":"vidcall-snbapps.appspot.com","locationId":"asia-south1"},"state":"ACTIVE"}
+[debug] [2021-05-09T10:41:11.178Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vidcall-snbapps [none]
+[debug] [2021-05-09T10:41:32.249Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/vidcall-snbapps
+[debug] [2021-05-09T10:41:32.919Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/vidcall-snbapps
+    at Client.doRequest (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:211:19)
+    at processTicksAndRejections (node:internal/process/task_queues:94:5)
+    at async Client.request (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:66:9)
+    at async C:\Users\offic\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:169:17
+[error] 
+[error] Error: Failed to get Firebase project vidcall-snbapps. Please make sure the project exists and your account has permission to access it.
